@@ -1,0 +1,37 @@
+{
+  "name": "@sup3r-us3r/docs",
+  "version": "1.0.0",
+  "description": "Design System documentation with Storybook",
+  "main": "index.js",
+  "scripts": {
+    "dev": "start-storybook -p 6006",
+    "build": "build-storybook"
+  },
+  "keywords": [
+    "docs"
+  ],
+  "author": "Mayderson",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.19.3",
+    "@storybook/addon-actions": "^6.5.12",
+    "@storybook/addon-essentials": "^6.5.12",
+    "@storybook/addon-interactions": "^6.5.12",
+    "@storybook/addon-links": "^6.5.12",
+    "@storybook/builder-vite": "^0.2.3",
+    "@storybook/react": "^6.5.12",
+    "@storybook/testing-library": "^0.0.13",
+    "@sup3r-us3r/eslint-config": "*",
+    "@sup3r-us3r/react": "*",
+    "@sup3r-us3r/tokens": "*",
+    "@sup3r-us3r/ts-config": "*",
+    "@vitejs/plugin-react": "^2.1.0",
+    "babel-loader": "^8.2.5",
+    "vite": "^3.1.6"
+  },
+  "dependencies": {
+    "@storybook/addon-a11y": "^6.5.12",
+    "phosphor-react": "^1.4.1",
+    "polished": "^4.2.2"
+  }
+}
