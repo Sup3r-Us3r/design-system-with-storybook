@@ -1,0 +1,24 @@
+{
+  "name": "@sup3r-us3r/tokens",
+  "version": "1.0.0",
+  "description": "Standardized elements for the Design System",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "dev": "tsup src/index.ts --format esm,cjs --dts --watch",
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "lint": "eslint src/**/*.ts* --fix"
+  },
+  "keywords": [
+    "tokens"
+  ],
+  "author": "Mayderson",
+  "license": "MIT",
+  "devDependencies": {
+    "@sup3r-us3r/ts-config": "*",
+    "@sup3r-us3r/eslint-config": "*",
+    "tsup": "^6.2.3",
+    "typescript": "^4.8.4"
+  }
+}
