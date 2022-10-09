@@ -1,0 +1,11 @@
+{
+  "name": "@sup3r-us3r/ts-config",
+  "version": "1.0.0",
+  "description": "TypeScript configuration",
+  "keywords": [
+    "ts-config"
+  ],
+  "author": "Mayderson",
+  "license": "MIT",
+  "private": true
+}
