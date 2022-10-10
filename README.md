@@ -68,7 +68,44 @@ The components developed were these:
 - [x] [Avatar](./packages/react/src/components/Avatar/index.tsx)
 - [x] [MultiStep](./packages/react/src/components/MultiStep/index.tsx)
 
+## General settings
+
+In the section below, the deployment process will be discussed, but before carrying out these procedures, it is necessary to change the name of the organization `@sup3r-us3r`, defined in each package and in other places of the application, to what you define in the act of organization creation in NPM, due to the amount of files to change if you use for example VSCode to edit your codebase, you can use the `Search` function, search for that name and change it to what you define in all files at once.
+
+![change-organization](.github/change-organization.png)
+
 ## Deploy setup
+
+### GitHub pages
+
+In this project, the Design System documentation is done with Storybook, and there is a CI/CD flow to publish this documentation online, using GitHub Pages, which is a free hosting that GitHub offers.
+
+Some settings are required, follow the steps below to configure correctly:
+
+Change the value of the string `'/design-system-with-storybook/'` from the file `main.js` located in `packages/docs/.storybook/main.js` to the name of your repository on GitHub.
+
+```javascript
+...
+
+viteFinal: (config, { configType }) => {
+  if (configType === 'PRODUCTION') {
+    config.base = '/design-system-with-storybook/'
+  }
+
+  return config
+}
+
+...
+```
+
+Now run the action [Deploy docs](./.github/workflows/deploy-docs.yml) to publish the Storybook, this will automatically create a branch in your repository called `gh-pages`, it is in this branch which will store the content of the Storybook in production.
+
+Finally, go to `Settings` - `Pages` of your GitHub repository, make the following changes:
+
+- **Source**: change to **Deploy from a branch**
+- **Branch**: change to **gh-pages** **/root** and click **Save**
+
+![github-configure-pages](.github/github-configure-pages.png)
 
 ### NPM
 
