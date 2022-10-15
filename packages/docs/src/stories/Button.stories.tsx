@@ -8,7 +8,7 @@ export default {
   args: {
     variant: 'primary',
     size: 'md',
-    disabled: true,
+    disabled: false,
   },
   argTypes: {
     variant: {
